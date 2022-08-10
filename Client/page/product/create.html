@@ -259,11 +259,7 @@
               <!-- /.card-header -->
               <!-- form start -->
               <form name="create-product">
-                <div class="card-body">
-                  <div class="form-group col-md-2">
-                    <label for="id">Id</label>
-                    <input type="text" class="form-control" id="id" name="id" placeholder="Enter id" required>
-                  </div>
+                <div class="card-body">                  
                   <div class="form-group col-md-5">
                     <label for="name">Name</label>
                     <input type="text" class="form-control" id="name"  name="name" placeholder="Enter name" required>
@@ -327,7 +323,6 @@
 
     document.addEventListener("DOMContentLoaded",function(){
         var btnSubmit = document.forms['create-product']['btn-submit'];
-        var txtid = document.forms['create-product']['id'];
         var txtname = document.forms['create-product']['name'];
         var txtprice = document.forms['create-product']['price'];
         var txtquantity = document.forms['create-product']['quantity'];
@@ -335,13 +330,11 @@
         if(btnSubmit){
             btnSubmit.onclick = function(event){
                 event.preventDefault();
-                var id = txtid.value;
                 var name = txtname.value;
                 var price = txtprice.value;
                 var quantity = txtquantity.quantity;
                 
                 var obj = {
-                    'id' : id,
                     'name' : name,
                     'price' : price,                
                     'quantity' : quantity
